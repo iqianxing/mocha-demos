@@ -1,0 +1,18 @@
+{
+  "name": "mocha-helloworld",
+  "version": "1.0.0",
+  "description": "mocha helloworld",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "mocha"
+  ],
+  "author": "helloworld",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "request": "^2.81.0"
+  }
+}
