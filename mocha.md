@@ -39,70 +39,6 @@ PS D:\Projects\nstarter\examples\example-mocha\mocha> mocha
       √ one
       √ two
       √ three
-
-  serial
-    nested
-      √ foo
-      √ bar
-      hooks
-        √ one
-        √ two
-
-  serial
-    hooks
-      √ one
-      √ two
-      √ three
-  Test
-    .clone()
-      √ should copy the title
-      √ should copy the timeout value
-      √ should copy the slow value
-      √ should copy the enableTimeouts value
-      √ should copy the retries value
-      √ should copy the currentRetry value
-      √ should copy the globals value
-      √ should copy the parent value
-      √ should copy the file value
-    .isPending()
-      √ should not be pending by default
-      √ should be pending when marked as such
-      √ should be pending when its parent is pending
-
-  utils
-    .clean()
-      √ should remove the wrapping function declaration
-      √ should handle newlines in the function declaration
-      √ should remove space character indentation from the function body
-      √ should remove tab character indentation from the function body
-      √ should handle functions with tabs in their declarations
-      √ should handle named functions without space after name
-      √ should handle named functions with space after name
-      √ should handle functions with no space between the end and the closing brace
-      √ should handle functions with parentheses in the same line
-      √ should handle empty functions
-    .isBuffer()
-      √ should test if object is a Buffer
-    .map()
-      √ should behave same as Array.prototype.map
-      √ should call the callback with 3 arguments[currentValue, index, array]
-      √ should apply with the given scope
-    .some()
-      √ should return true when some array elements pass the check of the fn parameter
-      √ should return false when none of the array elements pass the check of the fn parameter
-    .parseQuery()
-      √ should get queryString and return key-value object
-      √ should parse "+" as a space
-    .stackTraceFilter()
-      on node
-        on POSIX OS
-          - should get a stack-trace as a string and prettify it
-          - does not ignore other bower_components and components
-          - should replace absolute with relative paths
-        on Windows
-          √ should work on Windows
-      on browser
-        √ does not strip out other bower_components
     .isPromise
       √ should return true if the value is Promise-ish
       √ should return false if the value is not an object
@@ -186,56 +122,7 @@ mocha-helloworld@1.0.0 D:\Projects\nstarter\examples\example-mocha-helloworld
   +-- aws-sign2@0.6.0
   +-- aws4@1.6.0
   +-- caseless@0.12.0
-  +-- combined-stream@1.0.5
-  | `-- delayed-stream@1.0.0
-  +-- extend@3.0.1
-  +-- forever-agent@0.6.1
-  +-- form-data@2.1.4
-  | `-- asynckit@0.4.0
-  +-- har-validator@4.2.1
-  | +-- ajv@4.11.8
-  | | +-- co@4.6.0
-  | | `-- json-stable-stringify@1.0.1
-  | |   `-- jsonify@0.0.0
-  | `-- har-schema@1.0.5
-  +-- hawk@3.1.3
-  | +-- boom@2.10.1
-  | +-- cryptiles@2.0.5
-  | +-- hoek@2.16.3
-  | `-- sntp@1.0.9
-  +-- http-signature@1.1.1
-  | +-- assert-plus@0.2.0
-  | +-- jsprim@1.4.0
-  | | +-- assert-plus@1.0.0
-  | | +-- extsprintf@1.0.2
-  | | +-- json-schema@0.2.3
-  | | `-- verror@1.3.6
-  | `-- sshpk@1.13.0
-  |   +-- asn1@0.2.3
-  |   +-- assert-plus@1.0.0
-  |   +-- bcrypt-pbkdf@1.0.1
-  |   +-- dashdash@1.14.1
-  |   | `-- assert-plus@1.0.0
-  |   +-- ecc-jsbn@0.1.1
-  |   +-- getpass@0.1.7
-  |   | `-- assert-plus@1.0.0
-  |   +-- jodid25519@1.0.2
-  |   +-- jsbn@0.1.1
-  |   `-- tweetnacl@0.14.5
-  +-- is-typedarray@1.0.0
-  +-- isstream@0.1.2
-  +-- json-stringify-safe@5.0.1
-  +-- mime-types@2.1.15
-  | `-- mime-db@1.27.0
-  +-- oauth-sign@0.8.2
-  +-- performance-now@0.2.0
-  +-- qs@6.4.0
-  +-- safe-buffer@5.0.1
-  +-- stringstream@0.0.5
-  +-- tough-cookie@2.3.2
-  | `-- punycode@1.4.1
-  +-- tunnel-agent@0.6.0
-  `-- uuid@3.0.1
+......
 
 npm WARN mocha-helloworld@1.0.0 No repository field.
 PS D:\Projects\nstarter\examples\example-mocha-helloworld>
@@ -302,4 +189,29 @@ PS D:\Projects\nstarter\examples\example-mocha-helloworld> mocha .\test\qq.spec.
   1 passing (672ms)
 ```
 
+
+##  钩子函数  
+钩子函数示例
+``` js
+describe('hooks', function() {
+
+  before(function() {
+    // runs before all tests in this block
+  });
+
+  after(function() {
+    // runs after all tests in this block
+  });
+
+  beforeEach(function() {
+    // runs before each test in this block
+  });
+
+  afterEach(function() {
+    // runs after each test in this block
+  });
+
+  // test cases
+});
+```
 
