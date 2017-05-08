@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "chai": "^3.5.0",
+    "mysql": "^2.13.0",
     "request": "^2.81.0"
   }
 }
