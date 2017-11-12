@@ -15,5 +15,9 @@
     "chai": "^3.5.0",
     "mysql": "^2.13.0",
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "mochawesome": "^2.3.1"
   }
 }

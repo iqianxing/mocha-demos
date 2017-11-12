@@ -1,10 +1,11 @@
 var assert = require("chai").assert;
 var request = require("request");
 
-describe("# http://www.qq.com", function () {
-    it("打开qq主页", function (done) {
-        request.get("http://www.qq.com", function (err, response, body) {
-            assert.ok(response.statusCode, 200);
+describe("# https://www.github.com", function () {
+    it("github", function (done) {
+        request.get("https://www.github.com", function (err, response, body) {
+            assert.equal(response.statusCode, 200);
+            assert.ok(body);
             done();
         });
     })

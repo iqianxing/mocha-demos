@@ -1,8 +1,8 @@
 var assert = require("chai").assert;
 var mysql = require("mysql");
 
-describe("# mysql测试", function () {
-    it("查询", function (done) {
+describe("# mysql test", function () {
+    it("query", function (done) {
         var connection = mysql.createConnection({
             host: '127.0.0.1',
             user: 'root',
