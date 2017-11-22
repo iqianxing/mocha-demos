@@ -1,0 +1,3 @@
+--reporter mochawesome
+--reporter-options reportDir=mochawesome-report,reportFilename=mocha-helloworld,reportTitle=mocha-helloworld,reportPageTitle="Helloworld-Report",overwrite=true
+--timeout 200
