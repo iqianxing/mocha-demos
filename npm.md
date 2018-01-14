@@ -22,69 +22,19 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
 ## npm install
-安装node.js项目的依赖包。  
-项目依赖安装完毕便可进行开发、测试工作了。   
-示例如下：
-``` shell
-PS D:\Projects\nstarter> cd .\examples\example-mocha
-PS D:\Projects\nstarter\examples\example-mocha> git clone https://github.com/mochajs/mocha
-Cloning into 'mocha'...
-remote: Counting objects: 11346, done.
-remote: Compressing objects: 100% (69/69), done.
-remote: Total 11346 (delta 40), reused 0 (delta 0), pack-reused 11277
-Receiving objects: 100% (11346/11346), 3.52 MiB | 43.00 KiB/s, done.
-Resolving deltas: 100% (7019/7019), done.
-Checking out files: 100% (250/250), done.
-PS D:\Projects\nstarter\examples\example-mocha> cd .\mocha
-PS D:\Projects\nstarter\examples\example-mocha\mocha> npm install
-npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
-npm WARN deprecated npmconf@0.0.24: this package has been reintegrated into npm and is now out of date with respect to npm
+安装node.js项目的依赖包。
+```
+npm install (with no args, in package dir)
+npm install [<@scope>/]<name>
+npm install [<@scope>/]<name>@<tag>
+npm install [<@scope>/]<name>@<version>
+npm install [<@scope>/]<name>@<version range>
+npm install <tarball file>
+npm install <tarball url>
+npm install <folder>
 
-> phantomjs-prebuilt@2.1.14 install D:\Projects\nstarter\examples\example-mocha\mocha\node_modules\karma-phantomjs-launcher\node_modules\phantomjs-prebuilt
-> node install.js
-
-Considering PhantomJS found at D:\Programs\phantomjs-2.1.1\bin\phantomjs.EXE
-Found PhantomJS at D:\Programs\phantomjs-2.1.1\bin\phantomjs.EXE ...verifying
-Writing location.js file
-PhantomJS is already installed on PATH at D:\Programs\phantomjs-2.1.1\bin\phantomjs.EXE
-
-> wd@1.2.0 install D:\Projects\nstarter\examples\example-mocha\mocha\node_modules\wd
-> node scripts/build-browser-scripts
-
-
-> phantomjs@1.9.8 install D:\Projects\nstarter\examples\example-mocha\mocha\node_modules\phantomjs
-> node install.js
-
-PhantomJS detected, but wrong version 2.1.1 @ D:\Programs\phantomjs-2.1.1\bin\phantomjs.EXE.
-Download already available at C:\Users\XIELIA~1\AppData\Local\Temp\phantomjs\phantomjs-1.9.7-windows.zip
-Extracting zip contents
-Copying extracted folder C:\Users\XIELIA~1\AppData\Local\Temp\phantomjs\phantomjs-1.9.7-windows.zip-extract-1494163516913\phantomjs-1.9.7-windows -> D:\Projects\nstarter\examples\example-moch
-a\mocha\node_modules\phantomjs\lib\phantom
-Writing location.js file
-Done. Phantomjs binary available at D:\Projects\nstarter\examples\example-mocha\mocha\node_modules\phantomjs\lib\phantom\phantomjs.exe
-
-> sauce-connect-launcher@1.2.2 postinstall D:\Projects\nstarter\examples\example-mocha\mocha\node_modules\sauce-connect-launcher
-> node scripts/install.js || nodejs scripts/install.js
-
-mocha@3.3.0 D:\Projects\nstarter\examples\example-mocha\mocha
-+-- @coderbyheart/karma-sauce-launcher@0.0.0-development  extraneous (git://github.com/coderbyheart/karma-sauce-launcher.git#5259942cd6d40090eaa13ceeef5b0b8738c7710f)
-+-- assert@1.4.1
-| `-- util@0.10.3
-|   `-- inherits@2.0.1
-+-- browser-stdout@1.3.0
-+-- browserify@13.3.0
-| +-- browser-pack@6.0.2
-| | +-- combine-source-map@0.7.2
-| | | +-- inline-source-map@0.6.2
-......
-+-- browserify@14.3.0
-| +-- buffer@5.0.6
-| +-- https-browserify@1.0.0
-| `-- string_decoder@0.10.31
-`-- outpipe@1.1.1
-
-npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\chokidar\node_modules\fsevents):
-npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+alias: npm i
+common options: [-S|--save|-D|--save-dev|-O|--save-optional] [-E|--save-exact] [-B|--save-bundle] [--dry-run]
 ```
 
 ## npm run <cmd>
