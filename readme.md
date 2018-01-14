@@ -8,7 +8,7 @@
 > console.log("Hello, world!");
 > ```
 
-# node环境安装
+# node.js环境安装
 1. 在[node.js官网](https://nodejs.org/en/)下载node.js安装包，进行安装。
 2. 安装完毕后，检查node.js版本的命令如下：
 > ```
