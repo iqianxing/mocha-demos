@@ -22,16 +22,15 @@
 > ```
 
 # node.js的helloworld程序
-1. 在命令行中输入 ``` node ```;
-2. 输入``` console.log("Hello, world!");```
-3. 完整输入如下：
+1. 新建一个helloworld.js的文件;
+2. 打开文件，输入下述内容：
+``` console.log("Hello, world!");```
+3. 保存文件；
+4. 输入```node helloworld.js```命令运行helloworld程序。
 >```
-> PS C:\Users\qianx> node
-> > console.log("Hello, world!")
-> Hello, world!
-> undefined
-> >
-> ```
+>D:\mocha\nstarter\src>node helloworld.js
+>Hello, World!
+>```
 
 
 # 参考资料
