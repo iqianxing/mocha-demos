@@ -21,7 +21,7 @@ describe("#/feeds/getRecommendList", function () {
                 var newData = JSON.parse(JSON.stringify(data));
                 newData[field] = null;
                 request.get("https://recommend.browser.qq.com/feeds/getRecommendList", {
-                    qs: {},
+                    qs: newData,
                 }, function (error, response, body) {
                     assert.equal(response.statusCode, 200);
                     done();
@@ -36,7 +36,7 @@ describe("#/feeds/getRecommendList", function () {
                 var newData = JSON.parse(JSON.stringify(data));
                 newData[field] = "长度超过50个字符的字符串：欢迎各位学习mocha，mocha真的很好用。This is just a test 0e5b2e73aabfedbbf2a21e83cb4bafb9：字段长度检查(假设每个字段参数长度不超过50个字符)";
                 request.get("https://recommend.browser.qq.com/feeds/getRecommendList", {
-                    qs: {},
+                    qs: newData,
                 }, function (error, response, body) {
                     assert.notEqual(response.statusCode, 200);
                     done();
@@ -51,7 +51,7 @@ describe("#/feeds/getRecommendList", function () {
                 var newData = JSON.parse(JSON.stringify(data));
                 newData[field] = "11' or 1=1 -- ";
                 request.get("https://recommend.browser.qq.com/feeds/getRecommendList", {
-                    qs: {},
+                    qs: newData,
                 }, function (error, response, body) {
                     assert.equal(response.statusCode, 200);
                     done();
