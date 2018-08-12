@@ -21,7 +21,7 @@ describe("JSON对比测试", function () {
   
   it("JSON嵌套：Key顺序不同+Value不同", function () {
     var oldJson = JSON.parse('{"user":{"name":"devops","age":10},"hello":"world","success":true}');
-    var newJson = JSON.parse('{"success":true,"hello":"wOrld","user":{"name":"test","age":10}}');
+    var newJson = JSON.parse('{"success":true,"hello":"world","user":{"name":"test","age":10}}');
     assert.deepEqual(oldJson, newJson);
   });
 })
