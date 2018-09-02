@@ -38,7 +38,7 @@ module.exports = function (testcases) {
 
         it("等待200ms", function (done) {
           setTimeout(done, 200);
-        })
+        });
       })
     });
   });
@@ -64,7 +64,7 @@ if (module.parent && /mocha\.js/.test(module.parent.id)) {
       module.exports(results);
       setTimeout(function () {}, 10)
     });
-  }, 1000)
+  }, 100)
 
   describe("从数据库中读取数据", function () {
     it("读取用例", function () {
